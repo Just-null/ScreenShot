@@ -1,0 +1,23 @@
+name: get
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  push:
+    branches:
+      - main
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download
+      run: |
+        curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://blog.just-null.cn/ -o just.jpg
+
+        curl https://purge.jsdelivr.net/gh/Just-null/ScreenShot@gh-pages/*.*
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.TOKEN }}
+        publish_dir: ./
