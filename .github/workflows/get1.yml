@@ -17,6 +17,7 @@ jobs:
         curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://jerryc.me/ -o jerryc.me.jpg
         curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://blog.zhheo.com/ -o blog.zhheo.jpg
         curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://ethant.top/ -o ethant.jpg
+        curl https://image.thum.io/get/width/400/crop/800/allowJPG/wait/20/noanimate/https://realwds-blog.vercel.app/ -o realwds.jpg
 
         curl https://purge.jsdelivr.net/gh/Just-null/ScreenShot@gh-pages/*.*
     - name: Deploy
